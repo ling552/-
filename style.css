@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+canvas {
+    display: block;
+}
+#debug {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: monospace;
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#debug.visible {
+    opacity: 1;
+}
+#toggleButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#toggleButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+#toggleButton.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+#toggleButton svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
